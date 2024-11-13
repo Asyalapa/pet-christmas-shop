@@ -1,0 +1,106 @@
+:root {
+    font-size: 10px;
+    --primary-color: #FF4646;
+    --primary-10-color: rgba(255, 70, 70, 0.1);
+    --dark-color: #181C29;
+    --static-white-color: #ffffff;
+    --static-white-40-color: rgba(255, 255, 255, 0.4);
+    --static-white-20-color: rgba(255, 255, 255, 0.2);
+    --tag-purple-color: #4361FF;
+    --tag-pink-color: #FF43F7;
+    --tag-green-color: #06A44F;
+    --content-bg-color: #ECF3F8;
+    --overlay-color: rgba(24, 28, 41, 0.8);
+    --font-family-primary: Montserrat;
+    --font-family-second: Allura;
+    --font-size-big: 3.2rem;
+    --font-size-large: 2.4rem;
+    --font-size-medium: 1.6rem;
+    --font-size-small: 1.2rem;
+    --font-size-slider: 8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-one {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-big);
+    font-weight: 600;
+    line-height:  150%;
+    letter-spacing:  18%;
+    text-transform: uppercase;
+}
+.header-two {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    line-height:  152%;
+    letter-spacing:  16%;
+    text-transform: uppercase;
+}
+.header-three {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+    line-height:  152%;
+    letter-spacing:  8%;
+    text-transform: uppercase;
+}
+.header-four {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    line-height:  130%;
+    letter-spacing:  5%;
+    text-transform: uppercase;
+}
+.paragraph {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    line-height:  148%;
+}
+.action-large {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    line-height:  152%;
+    letter-spacing:  16%;
+    text-transform: uppercase;
+}
+.action-small {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    line-height:  130%;
+    letter-spacing:  5%;
+    text-transform: uppercase;
+}
+.caption {
+    font-family: var(--font-family-second);
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    line-height:  100%;
+    letter-spacing:  5%;
+}
+.slider-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-slider);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}
