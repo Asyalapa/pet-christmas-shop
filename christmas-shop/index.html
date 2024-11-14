@@ -6,85 +6,109 @@
     <title>Christmas Shop</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="shortcut icon" href="./img/snowflake.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Allura&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1 class="hidden-title">Christmas Shop</h1>
     <header class="header">
-        <a href="#" class="header__logo">the gifts</a>
+        <a href="#" class="header__logo action-small">the gifts</a>
         <nav class="header__navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">gifts</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">about</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">best</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">contacts</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link action-small">gifts</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link action-small">about</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link action-small">best</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link action-small">contacts</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section class="hero">
-            <p class="hero__italic-text">Merry Christmas</p>
-            <h2 class="hero__header-text">Gift yourself the magic of new possibilities</h2>
-            <button class="hero__btn">Explore Magical Gifts</button>
-            <p class="hero__italic-text">and Happy New Year</p>
+            <p class="hero__italic-text caption">Merry Christmas</p>
+            <h2 class="hero__header-text header-one">Gift yourself the magic of new possibilities</h2>
+            <button class="hero__btn action-small">Explore Magical Gifts</button>
+            <p class="hero__italic-text caption">and Happy New Year</p>
         </section>
         <section class="about">
             <div class="about__container">
-                <h2 class="about__header">About</h2>
-                <p class="about__header-text">Unleash your inner superhero!</p>
-                <p class="about__paragraph">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</p>
+                <h2 class="about__header caption">About</h2>
+                <p class="about__header-text header-two">Unleash your inner superhero!</p>
+                <p class="about__paragraph paragraph">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</p>
             </div>
             <div class="about__container"></div>
         </section>
         <section class="slider">
-            <h2 class="slider__header">Become Happier!</h2>
-            <p class="slider__text">in the new 2025</p>
-            <div class="slider__box">
-                <div class="slider__item">
-                    <h3 class="slider__caption">live</h3>
-                </div>
+            <h2 class="slider__header caption">Become Happier!</h2>
+            <p class="slider__text action-large">in the new 2025</p>
+            <ul class="slider__wrapper">
+                <li class="slider__item">
+                    <h3 class="slider__caption slider-text">live</h3>
+                    <img src="./img/snowman.png" alt="Image symbolizing live" class="slider__image">
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__caption slider-text">create</h3>
+                    <img src="./img/christmas-trees.png" alt="Image symbolizing create" class="slider__image">
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__caption slider-text">love</h3>
+                    <img src="./img/christmas-tree-ball.png" alt="Image symbolizing love" class="slider__image">
+                </li>
+                <li class="slider__item">
+                    <h3 class="slider__caption slider-text">dream</h3>
+                    <img src="./img/fairytale-house.png" alt="Image symbolizing dream" class="slider__image">
+                </li>
+            </ul>
+            <div class="slider__btn-wrapper">
+                <button class="slider__btn left-button">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 7H1M1 7L7 1M1 7L7 13" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="slider__btn right-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
             </div>
-            <button class="slider__btn left-button"></button>
-            <button class="slider__btn right-button"></button>
         </section>
         <section class="best-gifts">
-            <h2 class="best-gifts__header">Best Gifts</h2>
-            <p class="best-gifts__text">especially for you</p>
+            <h2 class="best-gifts__header caption">Best Gifts</h2>
+            <p class="best-gifts__text header-two">especially for you</p>
             <ul class="best-gifts__list">
                 <li class="best-gifts__item">
                     <div class="best-gifts__text-box">
-                        <h3 class="best-gifts__title">For work</h3>
-                        <p class="best-gifts__text">Console.log Guru</p>
+                        <h3 class="best-gifts__title header-four">For work</h3>
+                        <p class="best-gifts__text header-three">Console.log Guru</p>
                     </div>
                 </li>
                 <li class="best-gifts__item">
                     <div class="best-gifts__text-box">
-                        <h3 class="best-gifts__title">For health</h3>
-                        <p class="best-gifts__text">Hydration Bot</p>
+                        <h3 class="best-gifts__title header-four">For health</h3>
+                        <p class="best-gifts__text header-three">Hydration Bot</p>
                     </div>
                 </li>
                 <li class="best-gifts__item">
                     <div class="best-gifts__text-box">
-                        <h3 class="best-gifts__title">For work</h3>
-                        <p class="best-gifts__text">Merge Master</p>
+                        <h3 class="best-gifts__title header-four">For work</h3>
+                        <p class="best-gifts__text header-three">Merge Master</p>
                     </div>
                 </li>
                 <li class="best-gifts__item">
                     <div class="best-gifts__text-box">
-                        <h3 class="best-gifts__title">For harmony</h3>
-                        <p class="best-gifts__text">Spontaneous Coding Philosopher</p>
+                        <h3 class="best-gifts__title header-four">For harmony</h3>
+                        <p class="best-gifts__text header-three">Spontaneous Coding Philosopher</p>
                     </div>
                 </li>
             </ul>
         </section>
         <section class="cta">
-            <p class="cta__paragraph">Ready to start your journey to a better version of yourself?</p>
-            <button class="cta__btn">Explore Magical Gifts</button>
-            <h2 class="cta__header-text">The New Year is Coming Soon...</h2>
+            <p class="cta__paragraph header-two">Ready to start your journey to a better version of yourself?</p>
+            <button class="cta__btn action-small">Explore Magical Gifts</button>
+            <h2 class="cta__header-text caption">The New Year is Coming Soon...</h2>
             <ul class="timer__box">
-                <li class="timer__item">days</li>
-                <li class="timer__item">hours</li>
-                <li class="timer__item">minutes</li>
-                <li class="timer__item">seconds</li>
+                <li class="timer__item header-four">days</li>
+                <li class="timer__item header-four">hours</li>
+                <li class="timer__item header-four">minutes</li>
+                <li class="timer__item header-four">seconds</li>
             </ul>
         </section>
     </main>
@@ -107,5 +131,7 @@
         </div>
         <div class="footer__box"></div>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
