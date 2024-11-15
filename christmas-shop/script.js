@@ -1,47 +1,63 @@
+const sliderSection = document.querySelector('.slider');
 const slider = document.querySelector('.slider__wrapper');
 const slides = document.querySelectorAll('.slider__item');
 const leftBtn = document.querySelector('.left-button');
 const rightBtn = document.querySelector('.right-button');
 
-let slideWidth = slides[0].offsetWidth;
-let visibleWidth = document.querySelector('.slider').offsetWidth;
-let currentPosition = 0;
-
+// Рассчет видимой области и ширины элемента слайдера при загрузке и изменении размера
 function updateSliderWidth() {
-    slideWidth = slides[0].offsetWidth; // ширина одного слайда
-    visibleWidth = document.querySelector('.slider').offsetWidth; // видимая ширина
-}
-
-function moveSlider(direction) {
-  console.log('moveSlider', direction);
-    const maxPosition = -(slideWidth * (slides.length - Math.floor(visibleWidth / slideWidth))); // конечная позиция
-    currentPosition += direction * slideWidth;
-  console.log('currentPosition', currentPosition, slideWidth);
-    // Ограничение перемещения
-    if (currentPosition > 0) {
-        currentPosition = 0;
-        console.log('if', currentPosition);
-    } else if (currentPosition < maxPosition) {
-        currentPosition = maxPosition;
-        console.log('else if', currentPosition);
+    const visibleWidth = sliderSection.offsetWidth;
+    const slideWidth = slider.children[0].offsetWidth;
+    const numSlides = slider.children.length;
+    
+    // Рассчет длины ленты слайдера
+    const gap = parseInt(getComputedStyle(slider).gap);
+    let totalSliderLength = (slideWidth * numSlides) + (gap * (numSlides - 1));
+  
+    // Рассчет количества слайдов для показа, исходя из видимой ширины
+    let widthSlidesToShow;
+    if (visibleWidth >= 768) {
+        widthSlidesToShow = (totalSliderLength - visibleWidth) / 4;
+    } else {
+        widthSlidesToShow = (totalSliderLength - visibleWidth) / 6;
     }
 
-    slider.style.transform = `translateX(${currentPosition}px)`;
-
-    // Управление активностью кнопок
-    leftBtn.disabled = currentPosition === 0;
-    rightBtn.disabled = currentPosition === maxPosition;
+    updateButtonStates();
 }
 
-leftBtn.addEventListener('click', () => moveSlider(-1));
-rightBtn.addEventListener('click', () => moveSlider(1));
+// Обновление состояний кнопок
+function updateButtonStates() {
+    const currentSlide = getCurrentSlide();
+    const maxSlides = slider.children.length - 1;
 
-// Обновление ширины слайдера при изменении размера окна
-window.addEventListener('resize', () => {
-    updateSliderWidth();
-    moveSlider(0); // Проверка позиции и активности кнопок
-});
-
-// Инициализация состояния кнопок и ширины при загрузке страницы
-updateSliderWidth();
-moveSlider(0);
+    leftBtn.disabled = currentSlide === 0;
+    rightBtn.disabled = currentSlide === maxSlides;
+}
+  
+  // Получение текущей позиции слайдера
+  function getCurrentSlide() {
+    const sliderRect = slider.getBoundingClientRect();
+    const slideWidth = slider.children[0].offsetWidth;
+    const currentSlide = Math.floor(sliderRect.left / slideWidth);
+    console.log(currentSlide);
+    return currentSlide;
+  }
+  
+  // Слушатель кликов по кнопкам
+  leftBtn.addEventListener('click', () => {
+    const currentSlide = getCurrentSlide();
+    const newSlide = currentSlide - 1;
+    slider.style.transform = `translateX(${newSlide * slideWidth}px)`;
+    updateButtonStates();
+  });
+  
+  rightBtn.addEventListener('click', () => {
+    const currentSlide = getCurrentSlide();
+    const newSlide = currentSlide + 1;
+    slider.style.transform = `translateX(${newSlide * slideWidth}px)`;
+    updateButtonStates();
+  });
+  
+  // Initialize the slider on load and resize
+  window.addEventListener('load', updateSliderWidth);
+  window.addEventListener('resize', updateSliderWidth);

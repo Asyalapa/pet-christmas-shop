@@ -176,7 +176,7 @@ ul {
     cursor: pointer;
     color: var(--static-white-color);
 }
-.slider-btn:disabled {
+.slider__btn:disabled {
     border: 1px solid var(--static-white-40-color);
     color: var(--static-white-40-color);
     cursor: not-allowed;
