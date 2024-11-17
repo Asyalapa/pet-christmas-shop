@@ -38,6 +38,10 @@ ul {
     list-style-type: none;
     display: flex;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+  }
 
 .header-one {
     font-family: var(--font-family);
@@ -90,7 +94,7 @@ ul {
     font-size: var(--font-size-small);
     font-weight: 600;
     line-height:  130%;
-    letter-spacing:  5%;
+    letter-spacing: 5%;
     text-transform: uppercase;
 }
 .caption {
@@ -117,6 +121,41 @@ ul {
     clip-path: inset(50%);
     border: 0;
     white-space: nowrap;
+}
+
+.header {
+    width: 100%;
+    max-width: 1440px;
+    padding: 12px 82px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-color);
+}
+.header__logo {
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.header__logo-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./img/snowflake.svg);
+}
+.header__navigation {
+}
+.navigation__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.navigation__item {
+    padding: 12px 20px;
+}
+.navigation__link {
+}
+.action-small {
 }
 
 .main {
