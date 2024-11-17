@@ -47,62 +47,62 @@ a {
     font-family: var(--font-family);
     font-size: var(--font-size-big);
     font-weight: 600;
-    line-height:  150%;
-    letter-spacing:  18%;
+    line-height: 150%;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 .header-two {
     font-family: var(--font-family);
     font-size: var(--font-size-large);
     font-weight: 600;
-    line-height:  152%;
-    letter-spacing:  16%;
+    line-height: 152%;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 .header-three {
     font-family: var(--font-family);
     font-size: var(--font-size-medium);
     font-weight: 600;
-    line-height:  152%;
-    letter-spacing:  8%;
+    line-height: 152%;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 .header-four {
     font-family: var(--font-family);
     font-size: var(--font-size-small);
     font-weight: 600;
-    line-height:  130%;
-    letter-spacing:  5%;
+    line-height: 130%;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 .paragraph {
     font-family: var(--font-family);
     font-size: var(--font-size-medium);
     font-weight: 400;
-    line-height:  148%;
+    line-height: 148%;
 }
 .action-large {
     font-family: var(--font-family);
     font-size: var(--font-size-large);
     font-weight: 600;
-    line-height:  152%;
-    letter-spacing:  16%;
+    line-height: 152%;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 .action-small {
     font-family: var(--font-family);
     font-size: var(--font-size-small);
     font-weight: 600;
-    line-height:  130%;
-    letter-spacing: 5%;
+    line-height: 130%;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 .caption {
     font-family: var(--second-family);
     font-size: var(--font-size-large);
     font-weight: 400;
-    line-height:  100%;
-    letter-spacing:  5%;
+    line-height: 100%;
+    letter-spacing: 0.05em;
 }
 .slider-text {
     font-family: var(--font-family);
@@ -157,9 +157,9 @@ a {
 .main {
     background-color: var(--primary-color);
     background-image: url("./img/bg-snow.png");
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     border-radius: 20px;
     width: 1440px;
 }
@@ -168,7 +168,7 @@ a {
 .hero {
     display: flex;
     justify-content: center;
-    padding: 60px 507px;
+    padding: 48px 0;
     color: var(--static-white-color);
     background-image: url(./img/bg-ball.png);
     background-size: cover;
@@ -250,6 +250,7 @@ a {
 }
 .slider__header {
     text-align: center;
+    margin-bottom: 13px;
 }
 .slider__text {
     text-align: center;
@@ -300,7 +301,7 @@ a {
     padding: 60px 82px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     color: var(--static-white-color);
 }
 .best-gifts__text-box {
@@ -310,17 +311,35 @@ a {
     gap: 12px;
 }
 .best-gifts__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .best-gifts__item {
+    width: 100%;
+    max-width: 310px;
+    padding-top: 230px;
     border-radius: 20px;
+    background-color: var(--content-bg-color);
 }
 .best-gifts__item-box {
+    height: 100%;
+    padding: 20px;
     border-radius: 20px;
     background-color: var(--static-white-color);
 }
 .best-gifts__title {
+    margin-bottom: 8px;
 }
-.header-four {
+.best-gifts__title.for-work {
+    color: var(--tag-purple-color);
 }
-.header-three {
+.best-gifts__title.for-health {
+    color: var(--tag-green-color);
+}
+.best-gifts__title.for-harmony {
+    color: var(--tag-pink-color);
+}
+.best-gifts__text {
+    color: var(--dark-color);
 }
