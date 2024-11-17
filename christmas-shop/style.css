@@ -123,6 +123,7 @@ a {
     white-space: nowrap;
 }
 
+/* ---> H E A D E R <---  */
 .header {
     width: 100%;
     max-width: 1440px;
@@ -143,8 +144,6 @@ a {
     height: 24px;
     background-image: url(./img/snowflake.svg);
 }
-.header__navigation {
-}
 .navigation__list {
     display: flex;
     align-items: center;
@@ -153,11 +152,8 @@ a {
 .navigation__item {
     padding: 12px 20px;
 }
-.navigation__link {
-}
-.action-small {
-}
 
+/* ---> M A I N <---  */
 .main {
     background-color: var(--primary-color);
     background-image: url("./img/bg-snow.png");
@@ -167,7 +163,85 @@ a {
     border-radius: 20px;
     width: 1440px;
 }
-/* С Л А Й Д Е Р */
+
+/* ---> H E R O --- ПЕРВАЯ СЕКЦИЯ <---  */
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 60px 507px;
+    color: var(--static-white-color);
+    background-image: url(./img/bg-ball.png);
+    background-size: cover;
+    background-position: center;
+}
+.hero__text-box {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero__italic-text {
+    padding: 12px 0;
+}
+.hero__text {
+    margin-bottom: 12px;
+    text-align: center;
+}
+.hero__btn {
+    padding: 20px 32px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    background: var(--dark-color);
+    color: var(--static-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.hero__btn:hover {
+    background-color: var(--static-white-color);
+    color: var(--dark-color);
+    cursor: pointer;
+}
+
+/* ---> A B O U T --- ВТОРАЯ СЕКЦИЯ <---  */
+.about {
+    padding: 60px 82px;
+    color: var(--dark-color);
+}
+.about__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--static-white-color);
+    border-radius: 20px;
+}
+.about__container {
+    flex-basis: 50%;
+    padding: 100px 60px;
+}
+.about__container:last-child {
+    border-radius: 20px;
+    background-image: url(./img/santa.png);
+    background-size: cover;
+    background-position: center;
+}
+.about__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding: 60px 0px;
+}
+.about__header {
+    color: var(--primary-color);
+}
+.about__header-text {
+    max-width: 80%;
+}
+.about__paragraph {
+    max-width: 80%;
+}
+
+/* ---> S L I D E R --- ТРЕТЬЯ СЕКЦИЯ <---  */
 .slider {
     width: 100%;
     padding: 60px 82px;
@@ -220,7 +294,33 @@ a {
     color: var(--static-white-40-color);
     cursor: not-allowed;
 }
-.left-button {
+
+/* ---> B E S T   G I G T S --- ЧЕТВЕРТАЯ СЕКЦИЯ <---  */
+.best-gifts {
+    padding: 60px 82px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--static-white-color);
 }
-.right-button {
+.best-gifts__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.best-gifts__list {
+}
+.best-gifts__item {
+    border-radius: 20px;
+}
+.best-gifts__item-box {
+    border-radius: 20px;
+    background-color: var(--static-white-color);
+}
+.best-gifts__title {
+}
+.header-four {
+}
+.header-three {
 }
