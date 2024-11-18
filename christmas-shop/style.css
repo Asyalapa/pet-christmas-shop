@@ -27,7 +27,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -160,6 +162,14 @@ a {
   background-color: var(--primary-10-color);
   color: var(--primary-color);
   cursor: pointer;
+}
+.navigation__item.active {
+    background-color: var(--primary-10-color);
+  color: var(--primary-color);
+  cursor: default;
+}
+.navigation__item.active > .navigation__link {
+  cursor: default;
 }
 
 /* ---> M A I N <---  */
@@ -418,6 +428,10 @@ path {
 }
 .gift__categories-item:hover {
     cursor: pointer;
+    background-color: var(--static-white-20-color);
+}
+.gift__categories-item.active {
+    cursor: default;
     background-color: var(--static-white-20-color);
 }
 .best-gifts.gifts__section {
