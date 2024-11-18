@@ -151,6 +151,13 @@ a {
 }
 .navigation__item {
     padding: 12px 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.navigation__item:hover {
+    background-color: var(--primary-10-color);
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
 /* ---> M A I N <---  */
@@ -164,7 +171,7 @@ a {
     width: 1440px;
 }
 .main__btn {
-    /* padding: 20px 32px; */
+    padding: 20px 32px;
     border: none;
     border-radius: 20px;
     text-align: center;
@@ -200,9 +207,6 @@ a {
 .hero__text {
     margin-bottom: 12px;
     text-align: center;
-}
-.hero__btn {
-    padding: 20px 32px;
 }
 
 /* ---> A B O U T --- ВТОРАЯ СЕКЦИЯ <---  */
@@ -292,11 +296,25 @@ a {
     height: 56px;
     cursor: pointer;
     color: var(--static-white-color);
+    transition: background-color 0.3s ease-in-out;
+}
+path {
+    transition: stroke 0.3s ease-in-out;
+}
+.slider__btn:hover > svg > path {
+    stroke: var(--primary-color);
+}
+.slider__btn:hover {
+    background-color: var(--static-white-color);
 }
 .slider__btn:disabled {
     border: 1px solid var(--static-white-40-color);
     color: var(--static-white-40-color);
     cursor: not-allowed;
+    background-color: transparent;
+}
+.slider__btn:disabled > svg > path {
+    stroke: var(--static-white-40-color);
 }
 
 /* ---> B E S T   G I G T S --- ЧЕТВЕРТАЯ СЕКЦИЯ <---  */
@@ -328,6 +346,12 @@ a {
     background-repeat: no-repeat;
     background-position: center top;
 }
+.best-gifts__item:hover {
+    cursor: pointer;
+}
+.best-gifts__item:hover > .best-gifts__item-box > .best-gifts__text {
+    color: var(--primary-color);
+}
 .best-gifts__item.for-work {
     background-image: url(./img/gift-for-work.png);
 }
@@ -358,32 +382,161 @@ a {
 .best-gifts__text.header-three {
     color: var(--dark-color);
 }
+.best-gifts__text {
+    transition: color 0.3s ease-in-out;
+}
 
 /* ---> C T A --- ПЯТАЯ СЕКЦИЯ <---  */
 .cta {
+    display: flex;
+    justify-content: center;
     padding: 60px 82px;
+    color: var(--static-white-color);
+    background-image: url(./img/bg-forest.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+.cta__box {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    color: var(--static-white-color);
+    align-items: center;
+    padding: 120px 0;
+    max-width: 450px;
 }
 .cta__paragraph {
-}
-.header-two {
-}
-.main__btn {
+    text-align: center;
+    margin-bottom: 20px;
 }
 .cta__btn {
-}
-.action-small {
+    margin-bottom: 20px;
 }
 .cta__header-text {
-}
-.caption {
+    margin-bottom: 8px;
 }
 .timer__box {
+    padding: 10px 12px;
+    border-radius: 20px;
+    background-color: var(--static-white-40-color);
 }
 .timer__item {
+    width: 80px;
+    position: relative;
+    text-align: center;
 }
-.header-four {
+.timer__item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25%;
+    bottom: 25%;
+    width: 1px;
+    background-color: var(--static-white-40-color);
+  }
+
+/* ---> F O O T E R --- ШЕСТАЯ СЕКЦИЯ <---  */
+
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    padding: 60px 82px;
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    gap: 59px;
+    align-items: center;
+}
+.footer__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__box:last-child {
+    gap: 12px;
+}
+.footer__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+.footer__item {
+    flex: 1;
+}
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--content-bg-color);
+    transition: color 0.3s ease-in-out;
+}
+.footer__contact:hover {
+    color: var(--primary-color);
+}
+.footer__icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.footer__icon-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+.footer__icon-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__icon.phone {
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/santa-claus.svg);
+    background-position: center center;
+}
+.footer__icon.map {
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/christmas-tree.svg);
+    background-position: center center;
+}
+.footer__icon.mail {
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/snake.svg);
+    background-position: center center;
+}
+.footer__social-icon.tg {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/Socials.svg);
+    background-position: 0 0;
+}
+.footer__social-icon.fb {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/Socials.svg);
+    background-position: -52px 0;
+}
+.footer__social-icon.ig {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/Socials.svg);
+    background-position: -104px 0;
+}
+.footer__social-icon.x {
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/Socials.svg);
+    background-position: -156px 0;
 }

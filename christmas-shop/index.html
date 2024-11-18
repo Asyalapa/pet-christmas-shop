@@ -17,10 +17,18 @@
         </a>
         <nav class="header__navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link action-small">gifts</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link action-small">about</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link action-small">best</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link action-small">contacts</a></li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link action-small">gifts</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link action-small">about</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link action-small">best</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link action-small">contacts</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -112,35 +120,63 @@
             </ul>
         </section>
         <section class="cta">
-            <p class="cta__paragraph header-two">Ready to start your journey to a better version of yourself?</p>
-            <button class="main__btn cta__btn action-small">Explore Magical Gifts</button>
-            <h2 class="cta__header-text caption">The New Year is Coming Soon...</h2>
-            <ul class="timer__box">
-                <li class="timer__item header-four"><span id="days"></span> days</li>
-                <li class="timer__item header-four"><span id="hours"></span> hours</li>
-                <li class="timer__item header-four"><span id="minutes"></span> minutes</li>
-                <li class="timer__item header-four"><span id="seconds"></span> seconds</li>
-            </ul>
+            <div class="cta__box">
+                <p class="cta__paragraph header-two">Ready to start your journey to a better version of yourself?</p>
+                <button class="main__btn cta__btn action-small">Explore Magical Gifts</button>
+                <h2 class="cta__header-text caption">The New Year is Coming Soon...</h2>
+                <ul class="timer__box">
+                    <li class="timer__item header-four"><span class="header-two" id="days">47</span><br>days</li>
+                    <li class="timer__item header-four"><span class="header-two" id="hours">5</span><br>hours</li>
+                    <li class="timer__item header-four"><span class="header-two" id="minutes">34</span><br>minutes</li>
+                    <li class="timer__item header-four"><span class="header-two" id="seconds">12</span><br>seconds</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer__box">
             <ul class="footer__list">
                 <li class="footer__item">
-                    <a href="" class="footer__contact"></a>
-                    <p class="footer__text"></p>
+                    <a href="tel:+375291112233" class="footer__contact">
+                        <i class="footer__icon phone"></i>
+                        <p class="action-large"><nobr>+375 (29) 111-22-33</nobr></p>
+                        <p class="footer__text header-three">Call Us</p>
+                    </a>
                 </li>
                 <li class="footer__item">
-                    <a href="" class="footer__contact"></a>
-                    <p class="footer__text"></p>
+                    <a href="https://maps.app.goo.gl/ywHoP9vJxF8Sf8m39" class="footer__contact action-large" target="_blank">
+                        <i class="footer__icon map"></i>
+                        <p class="action-large">Magic forest</p>
+                        <p class="footer__text header-three">meet us</p>
+                    </a>
                 </li>
                 <li class="footer__item">
-                    <a href="" class="footer__contact"></a>
-                    <p class="footer__text"></p>
+                    <a href="email:gifts@magic.com" class="footer__contact action-large">
+                        <i class="footer__icon mail"></i>
+                        <p class="action-large"><nobr>gifts@magic.com</nobr></p>
+                        <p class="footer__text header-three">write us</p>
+                    </a>
                 </li>
             </ul>
         </div>
-        <div class="footer__box"></div>
+        <div class="footer__box">
+            <ul class="footer__icon-list">
+                <li class="footer__icon-item"><a href="#" class="footer__icon-link">
+                    <i class="footer__social-icon tg"></i>
+                </a></li>
+                <li class="footer__icon-item"><a href="#" class="footer__icon-link">
+                    <i class="footer__social-icon fb"></i>
+                </a></li>
+                <li class="footer__icon-item"><a href="#" class="footer__icon-link">
+                    <i class="footer__social-icon ig"></i>
+                </a></li>
+                <li class="footer__icon-item"><a href="#" class="footer__icon-link">
+                    <i class="footer__social-icon x"></i>
+                </a></li>
+            </ul>
+            <p class="footer__text paragraph">&copy; Copyright 2025, All Rights Reserved</p>
+            <a href="#" class="footer__school-link caption">Made in Rolling Scopes School</a>
+        </div>
     </footer>
 
     <script src="./script.js"></script>
