@@ -163,6 +163,20 @@ a {
     border-radius: 20px;
     width: 1440px;
 }
+.main__btn {
+    /* padding: 20px 32px; */
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    background: var(--dark-color);
+    color: var(--static-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.main__btn:hover {
+    background-color: var(--static-white-color);
+    color: var(--dark-color);
+    cursor: pointer;
+}
 
 /* ---> H E R O --- ПЕРВАЯ СЕКЦИЯ <---  */
 .hero {
@@ -189,17 +203,6 @@ a {
 }
 .hero__btn {
     padding: 20px 32px;
-    border: none;
-    border-radius: 20px;
-    text-align: center;
-    background: var(--dark-color);
-    color: var(--static-white-color);
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-.hero__btn:hover {
-    background-color: var(--static-white-color);
-    color: var(--dark-color);
-    cursor: pointer;
 }
 
 /* ---> A B O U T --- ВТОРАЯ СЕКЦИЯ <---  */
@@ -321,6 +324,18 @@ a {
     padding-top: 230px;
     border-radius: 20px;
     background-color: var(--content-bg-color);
+    background-size: auto 67%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.best-gifts__item.for-work {
+    background-image: url(./img/gift-for-work.png);
+}
+.best-gifts__item.for-health {
+    background-image: url(./img/gift-for-health.png);
+}
+.best-gifts__item.for-harmony {
+    background-image: url(./img/gift-for-harmony.png);
 }
 .best-gifts__item-box {
     height: 100%;
@@ -331,15 +346,44 @@ a {
 .best-gifts__title {
     margin-bottom: 8px;
 }
-.best-gifts__title.for-work {
+.for-work > .best-gifts__item-box > .best-gifts__title {
     color: var(--tag-purple-color);
 }
-.best-gifts__title.for-health {
+.for-health > .best-gifts__item-box > .best-gifts__title {
     color: var(--tag-green-color);
 }
-.best-gifts__title.for-harmony {
+.for-harmony > .best-gifts__item-box > .best-gifts__title {
     color: var(--tag-pink-color);
 }
-.best-gifts__text {
+.best-gifts__text.header-three {
     color: var(--dark-color);
+}
+
+/* ---> C T A --- ПЯТАЯ СЕКЦИЯ <---  */
+.cta {
+    padding: 60px 82px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: var(--static-white-color);
+}
+.cta__paragraph {
+}
+.header-two {
+}
+.main__btn {
+}
+.cta__btn {
+}
+.action-small {
+}
+.cta__header-text {
+}
+.caption {
+}
+.timer__box {
+}
+.timer__item {
+}
+.header-four {
 }
