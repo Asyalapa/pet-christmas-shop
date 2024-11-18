@@ -110,7 +110,9 @@ a {
   font-weight: 600;
   text-transform: uppercase;
 }
-
+.nowrap {
+    white-space: nowrap;
+}
 .hidden-title {
   position: absolute;
   width: 1px;
