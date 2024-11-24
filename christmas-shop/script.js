@@ -61,3 +61,12 @@ function updateButtonStates() {
   // Initialize the slider on load and resize
   window.addEventListener('load', updateSliderWidth);
   window.addEventListener('resize', updateSliderWidth);
+
+const burgerMenu = document.querySelector('.header__burger-menu');
+const burgerLines = document.querySelector('.header__burger-lines');
+const headerNavigation = document.querySelector('.header__navigation');
+
+burgerLines.addEventListener('click', () => {
+  burgerMenu.classList.toggle('open');
+  document.body.classList.toggle('no-scroll');
+});
