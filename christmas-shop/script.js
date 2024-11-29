@@ -56,14 +56,14 @@ const Slider = (function () {
     leftBtn.disabled = currentPositionX >= 0;
     rightBtn.disabled = currentPositionX <= maxPositionX;
 
-    if (leftBtn.disabled && !wasleftBtnDisabled) shakeButton(leftBtn);
-    if (rightBtn.disabled && !wasRightBtnDisabled) shakeButton(rightBtn);
+    if (leftBtn.disabled && !wasleftBtnDisabled) turnoverButton(leftBtn);
+    if (rightBtn.disabled && !wasRightBtnDisabled) turnoverButton(rightBtn);
   }
 
   //Вибрация кнопок при достижении конца слайдера
-  function shakeButton(button) {
-    button.classList.add('shake');
-    setTimeout(() => button.classList.remove('shake'), 300);
+  function turnoverButton(button) {
+    button.classList.add('turnover');
+    setTimeout(() => button.classList.remove('turnover'), 300);
   }
 
   // Перемещение слайдов

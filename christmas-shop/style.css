@@ -441,15 +441,15 @@ a {
 path {
   transition: stroke 0.3s ease-in-out;
 }
-@keyframes shake {
+@keyframes turnover {
   0% { transform: rotateZ(0); }
   25% { transform: rotateZ(90deg); }
   50% { transform: rotateZ(180deg); }
   75% { transform: rotateZ(270deg); }
   100% { transform: rotateZ(360deg); }
 }
-.shake {
-  animation: shake 0.3s ease-in-out;
+.turnover {
+  animation: turnover 0.3s ease-in-out;
 }
 
 /* -> SLIDER - MEDIA-QUERYS <-  */
