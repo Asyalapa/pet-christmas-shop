@@ -18,6 +18,9 @@ const Slider = (function () {
     rightBtn = rightButton;
     sliderItems = Array.from(sliderWrapper.children);
 
+    leftBtn.disabled = true;
+    rightBtn.disabled = false;
+
     updateSliderWidth();
     updateButtonStates();
 
@@ -36,8 +39,9 @@ const Slider = (function () {
     const hiddenWidth = sliderWidth - sliderVisibleWidth;
 
     slideMove = Math.ceil(sliderVisibleWidth > 768 ? hiddenWidth / 3 : hiddenWidth / 6);
+    sliderWrapper.style.transform = `translateX(0px)`;
     
-    updateButtonStates();
+    setTimeout(() => updateButtonStates(0), 0);
   }
 
   // Получение текущей позиции слайдера
@@ -106,7 +110,64 @@ const BurgerMenu = (function () {
   return { initialize };
 })();
 
+/**
+ * М О Д У Л Ь   Т А Й М Е Р А
+ */
+const Timer = ( function () {
+  let daysEl, hoursEl, minutesEl, secondsEl;
+  let finishDate;
+  let timerInterval;
+
+  function initialize (daysBox, hoursBox, minutesBox, secondsBox, finishD) {
+    daysEl = daysBox;
+    hoursEl = hoursBox;
+    minutesEl = minutesBox;
+    secondsEl = secondsBox;
+    finishDate = finishD;
+    updateTimer();
+
+    timerInterval = setInterval(updateTimer, 1000);
+  }
+
+  function updateTimer() {
+    const nowDate = new Date();
+    const lastDate = finishDate - nowDate;
+
+    if (lastDate <= 0) {
+      clearInterval(timerInterval);
+      return;
+    }
+
+    const seconds = Math.floor((lastDate / 1000) % 60);
+    const minutes = Math.floor((lastDate / 1000 / 60) % 60);
+    const hours = Math.floor((lastDate / 1000 / 60 / 60) % 24);
+    const days = Math.floor(lastDate / 1000 / 60 / 60 / 24);
+
+    setTimerVal(days, hours, minutes, seconds)
+  }
+
+  function setTimerVal(days, hours, minutes, seconds) {
+    daysEl.querySelector('#days').textContent = days;
+    hoursEl.querySelector('#hours').textContent = hours;
+    minutesEl.querySelector('#minutes').textContent = minutes;
+    secondsEl.querySelector('#seconds').textContent = seconds;
+
+    daysEl.querySelector('.time-signature').textContent = getRightWord(days, 'day', 'days');
+    hoursEl.querySelector('.time-signature').textContent = getRightWord(hours, 'hour', 'hours');
+    minutesEl.querySelector('.time-signature').textContent = getRightWord(minutes, 'minute', 'minutes');
+    secondsEl.querySelector('.time-signature').textContent = getRightWord(seconds, 'second', 'seconds');
+  }
+
+  function getRightWord(val, singular, plural) {
+    return val === 1 ? singular : plural;
+  }
+
+  return { initialize, };
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+  const finishDate = new Date(Date.UTC(2025, 0, 1, 0, 0, 0));
+
   Slider.initialize(
       document.querySelector('.slider'),
       document.querySelector('.slider__wrapper'),
@@ -117,5 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
   BurgerMenu.initialize(
       document.querySelector('.header__burger-menu'),
       document.querySelector('.header__burger-lines')
+  );
+
+  Timer.initialize (
+    document.getElementById('days').closest('.timer__item'),
+    document.getElementById('hours').closest('.timer__item'),
+    document.getElementById('minutes').closest('.timer__item'),
+    document.getElementById('seconds').closest('.timer__item'),
+    finishDate
   );
 });
