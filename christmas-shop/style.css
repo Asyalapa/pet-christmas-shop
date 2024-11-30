@@ -800,3 +800,36 @@ path {
     color: var(--primary-color);
   }
 }
+
+/* ---> S C R O L L - T O - T O P <---  */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: var(--static-white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-medium);
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3 ease;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .scroll-to-top.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+}

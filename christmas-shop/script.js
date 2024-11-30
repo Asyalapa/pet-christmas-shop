@@ -165,26 +165,68 @@ const Timer = ( function () {
   return { initialize, };
 })();
 
-document.addEventListener('DOMContentLoaded', () => {
-  const finishDate = new Date(Date.UTC(2025, 0, 1, 0, 0, 0));
+/**
+ * М О Д У Л Ь   S C R O L L - T O - T O P
+ */
+const ScrollToTop = (function () {
+  let scrollBtn;
+  const scrollOfset = 300;
 
-  Slider.initialize(
-      document.querySelector('.slider'),
-      document.querySelector('.slider__wrapper'),
-      document.querySelector('.left-button'),
-      document.querySelector('.right-button')
-  );
+  function initialize(selector = '.scroll-to-top') {
+    scrollBtn = document.querySelector(selector);
+
+    window.addEventListener('scroll', toggleVisibility);
+    scrollBtn.addEventListener('click', scrollToTop);
+
+    toggleVisibility();
+  }
+
+  function toggleVisibility() {
+    if (window.scrollY >= scrollOfset) {
+      scrollBtn.classList.add('show');
+      scrollBtn.classList.remove('hide');
+    } else {
+      scrollBtn.classList.add('hide');
+      scrollBtn.classList.remove('show');
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
+  return { initialize, }
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const pageName = document.body.id;
+  const finishDate = new Date(Date.UTC(2025, 0, 1, 0, 0, 0));
 
   BurgerMenu.initialize(
       document.querySelector('.header__burger-menu'),
       document.querySelector('.header__burger-lines')
   );
 
-  Timer.initialize (
-    document.getElementById('days').closest('.timer__item'),
-    document.getElementById('hours').closest('.timer__item'),
-    document.getElementById('minutes').closest('.timer__item'),
-    document.getElementById('seconds').closest('.timer__item'),
-    finishDate
-  );
+  if (pageName === 'home-page') {
+    Slider.initialize(
+      document.querySelector('.slider'),
+      document.querySelector('.slider__wrapper'),
+      document.querySelector('.left-button'),
+      document.querySelector('.right-button')
+    );
+    Timer.initialize (
+      document.getElementById('days').closest('.timer__item'),
+      document.getElementById('hours').closest('.timer__item'),
+      document.getElementById('minutes').closest('.timer__item'),
+      document.getElementById('seconds').closest('.timer__item'),
+      finishDate
+    );
+  }
+
+  if (pageName === 'gifts-page') {
+    ScrollToTop.initialize();
+  }
 });
