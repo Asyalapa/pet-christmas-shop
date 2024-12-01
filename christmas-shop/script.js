@@ -272,12 +272,14 @@ const CardsFilter = (function () {
 
   function initialize() {
     const filtres = document.querySelectorAll(filterSelector);
+
+    window.addEventListener('load', filterStyle(filtres));
     
     filtres.forEach((item) => {
       item.addEventListener('change', (event) => {
         const selectedCategory = event.target.value;
-        console.log(selectedCategory);
         filterCards(selectedCategory);
+        filterStyle(filtres);
       });
     });
   }
@@ -295,6 +297,12 @@ const CardsFilter = (function () {
       } else {
         item.style.display = 'none';
       }
+    });
+  }
+
+  function filterStyle(category) {
+    category.forEach((item) => {
+      item.checked ? item.parentElement.classList.add('active') : item.parentElement.classList.remove('active');
     });
   }
 

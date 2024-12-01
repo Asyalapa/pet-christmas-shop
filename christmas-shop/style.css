@@ -161,6 +161,7 @@ a {
   background-color: var(--primary-10-color);
   color: var(--primary-color);
   cursor: default;
+  pointer-events: none;
 }
 .navigation__link {
   display: inline-block;
@@ -176,6 +177,7 @@ a {
   }
   .navigation__item:hover.active .navigation__link {
     cursor: default;
+    pointer-events: none;
   }
 }
 @media (max-width: 768px) {
@@ -587,9 +589,11 @@ path {
     border-radius: 12px;
     transition: background-color 0.3s ease-in-out;
 }
+.gift__categories-item:has(input:checked),
 .gift__categories-item.active {
   cursor: default;
   background-color: var(--static-white-20-color);
+  pointer-events: none;  
 }
 .gift__categories-input {
   display: none;
@@ -603,9 +607,11 @@ path {
     cursor: pointer;
     background-color: var(--static-white-20-color);
   }
+  .gift__categories-item:hover:has(input:checked),
   .gift__categories-item:hover.active {
     background-color: var(--static-white-20-color);
     cursor: default;
+    pointer-events: none;
   }
 }
 @media (max-width: 500px) {
@@ -818,7 +824,7 @@ path {
   align-items: center;
   font-size: var(--font-size-medium);
   z-index: 10;
-  transition: opacity 0.3s ease, transform 0.3 ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 @media (max-width: 768px) {

@@ -46,13 +46,13 @@
     Таймер обновляется каждую секунду, показывая актуальное оставшееся время с метками дней, часов, минут и секунд (метки не изменяются): +4.
 4. [v] When both opening or refreshing the page, 4 random cards are displayed in the block Best Gifts on the home page: +4  
 При открытии или обновлении страницы в блоке "Best Gifts" на главной странице отображаются 4 случайные карточки: +4.
-5. Implementation of the Category switching for products on the gifts page: +8  
+5. [v] Implementation of the Category switching for products on the gifts page: +8  
 Реализация переключения категорий подарков на странице подарков: +8
-    - The ALL category is active and all 36 gifts are displayed when both opening or reloading the gifts page. The order of sorting gifts does not matter: +2  
+    - [v] The ALL category is active and all 36 gifts are displayed when both opening or reloading the gifts page. The order of sorting gifts does not matter: +2  
     При открытии или обновлении страницы активна категория "ALL", отображаются все 36 подарков. Порядок сортировки не важен: +2.
-    - When switching categories, the gifts of the selected category are displayed. The order of sorting gifts does not matter: +4  
+    - [v] When switching categories, the gifts of the selected category are displayed. The order of sorting gifts does not matter: +4  
     При переключении категорий отображаются подарки выбранной категории. Порядок сортировки не важен: +4.
-    - Only the selected category tab is active: +2  
+    - [v] Only the selected category tab is active: +2  
     Активной остаётся только выбранная вкладка категории: +2.
 6. [v] Implementation of the Scroll-to-Top button on the gifts page: +12  
 Реализация кнопки "Прокрутить вверх" на странице подарков: +12
