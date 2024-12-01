@@ -201,6 +201,72 @@ const ScrollToTop = (function () {
   return { initialize, }
 })();
 
+/**
+ * М О Д У Л Ь   Г Е Н Е Р А Ц И И   К А Р Т О Ч Е К
+ */
+const CardsGenerate = (function () {
+  let cardsContainer;
+
+  async function initialize(container, urlData, options) {
+    cardsContainer = document.querySelector(container);
+    
+    const giftData = await data(urlData);
+    cardGenerate(giftData, options);
+  }
+
+  async function data(url) {
+    try {
+      const giftsData = await fetch(url);
+      if (!giftsData.ok) throw new Error(`Ошибка загрузки файла ${giftsData.statusText}`);
+      return await giftsData.json();
+    } catch (error) {
+      console.error(`Что-то пошло не так: `, error);
+      return [];
+    }
+  }
+
+  function getRandomItems(array, count = array.length) {
+    const shuffled = array.sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
+
+  function cardGenerate(gifts, options = { count: null }) {
+    let randomCards;
+
+    if (!cardsContainer) {
+      console.warn('Контейнер для карточек не найден');
+      return;
+    }
+
+    if (options.count) {
+      randomCards = getRandomItems(gifts, options.count);
+    } else {
+      randomCards = getRandomItems(gifts);
+    }
+
+    cardsContainer.innerHTML = '';
+
+    randomCards.forEach((item) => {
+      const card = document.createElement('li');
+      const secondClass = (item.category).toLowerCase().split(' ').join('-')
+      card.className = `best-gifts__item ${secondClass}`;
+      card.innerHTML = `
+        <article class="best-gifts__item-box">
+          <h3 class="best-gifts__title header-four">${item.category}</h3>
+          <p class="best-gifts__text header-three">${item.name}</p>
+        </article>
+      `;
+      cardsContainer.appendChild(card);
+    });
+  }
+
+  return { initialize, };
+})();
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const pageName = document.body.id;
   const finishDate = new Date(Date.UTC(2025, 0, 1, 0, 0, 0));
@@ -224,9 +290,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('seconds').closest('.timer__item'),
       finishDate
     );
+    CardsGenerate.initialize('.best-gifts__list', '../gifts.json', { count: 4 });
   }
 
   if (pageName === 'gifts-page') {
     ScrollToTop.initialize();
+    CardsGenerate.initialize('.best-gifts__list', '../gifts.json');
   }
 });
