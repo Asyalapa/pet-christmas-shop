@@ -40,12 +40,25 @@
     </header>
     <main class="main gifts__main">
         <h2 class="gifts__title header-one">Achieve health, harmony, and inner strength</h2>
-        <ul class="gift__categories-list">
-            <li class="gift__categories-item action-small category-all active">all</li>
-            <li class="gift__categories-item action-small category-for-work">for&nbsp;work</li>
-            <li class="gift__categories-item action-small category-for-health">for&nbsp;health</li>
-            <li class="gift__categories-item action-small category-for-harmony">for&nbsp;harmony</li>
-        </ul>
+        <fieldset class="gift__categories-list">
+          <legend class="hidden-title">Filter gifts by category</legend>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="all" checked>
+            <span>all</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-work">
+            <span>for&nbsp;work</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-health">
+            <span>for&nbsp;health</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-harmony">
+            <span>for&nbsp;harmony</span>
+          </label>
+        </fieldset>
       <section class="best-gifts gifts__section">
         <ul class="best-gifts__list"></ul>
       </section>

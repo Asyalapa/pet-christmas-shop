@@ -263,7 +263,43 @@ const CardsGenerate = (function () {
   return { initialize, };
 })();
 
+/**
+ * М О Д У Л Ь   Ф И Л Ь Т Р А Ц И И   П О Д А Р К О В
+ */
+const CardsFilter = (function () {
+  const filterSelector = '.gift__categories-input';
+  const cardSelector = '.best-gifts__item';
 
+  function initialize() {
+    const filtres = document.querySelectorAll(filterSelector);
+    
+    filtres.forEach((item) => {
+      item.addEventListener('change', (event) => {
+        const selectedCategory = event.target.value;
+        console.log(selectedCategory);
+        filterCards(selectedCategory);
+      });
+    });
+  }
+
+  function filterCards(category) {
+    const cards = document.querySelectorAll(cardSelector);
+    
+    cards.forEach((item) => {
+      if (category === 'all') {
+        item.style.display = 'block';
+        return;
+      }
+      if (item.classList.contains(category)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  return { initialize, }
+})();
 
 
 
@@ -296,5 +332,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (pageName === 'gifts-page') {
     ScrollToTop.initialize();
     CardsGenerate.initialize('.best-gifts__list', '../gifts.json');
+    CardsFilter.initialize();
   }
 });

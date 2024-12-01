@@ -580,6 +580,7 @@ path {
     display: flex;
     gap: 8px;
     justify-content: center;
+    border: none;
 }
 .gift__categories-item {
     padding: 12px 20px;
@@ -589,6 +590,9 @@ path {
 .gift__categories-item.active {
   cursor: default;
   background-color: var(--static-white-20-color);
+}
+.gift__categories-input {
+  display: none;
 }
 .best-gifts.gifts__section {
     padding: 0;
