@@ -807,11 +807,7 @@ path {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 56px;
-  height: 56px;
-  background-color: var(--static-white-color);
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border: none;
   border-radius: 50%;
   display: none;
   justify-content: center;
@@ -831,5 +827,18 @@ path {
     opacity: 0;
     transform: scale(0.8);
     pointer-events: none;
+  }
+}
+@media (hover: hover) {
+  @keyframes for-scroll {
+    0% { transform: scale(1); }
+    35% { transform: scale(0.95); }
+    50% { transform: scale(0.9); }
+    65% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+  }
+  .scroll-to-top:hover {
+    cursor: pointer;
+    animation: for-scroll 0.3s ease-in-out;
   }
 }
