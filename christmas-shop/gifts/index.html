@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../img/snowflake.svg" type="image/x-icon">
 </head>
 
-  <body>
+  <body id="gifts-page">
     <h1 class="hidden-title">Christmas Shop</h1>
     <header class="header">
       <a href="../index.html" class="header__logo">
@@ -22,7 +22,7 @@
         </div>
         <nav class="header__navigation">
           <ul class="navigation__list">
-            <li class="navigation__item active">
+            <li class="navigation__item navigation__item--active">
               <a href="#" class="navigation__link action-small">gifts</a>
             </li>
             <li class="navigation__item">
@@ -40,93 +40,27 @@
     </header>
     <main class="main gifts__main">
         <h2 class="gifts__title header-one">Achieve health, harmony, and inner strength</h2>
-        <ul class="gift__categories-list">
-            <li class="gift__categories-item action-small category-all active">all</li>
-            <li class="gift__categories-item action-small category-for-work">for&nbsp;work</li>
-            <li class="gift__categories-item action-small category-for-health">for&nbsp;health</li>
-            <li class="gift__categories-item action-small category-for-harmony">for&nbsp;harmony</li>
-        </ul>
+        <fieldset class="gift__categories-list">
+          <legend class="hidden-title">Filter gifts by category</legend>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="all" checked>
+            <span>all</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-work">
+            <span>for&nbsp;work</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-health">
+            <span>for&nbsp;health</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-harmony">
+            <span>for&nbsp;harmony</span>
+          </label>
+        </fieldset>
       <section class="best-gifts gifts__section">
-        <ul class="best-gifts__list">
-          <li class="best-gifts__item for-work">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For work</h3>
-              <p class="best-gifts__text header-three">Console.log Guru</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-health">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For health</h3>
-              <p class="best-gifts__text header-three">Step Master</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-work">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For work</h3>
-              <p class="best-gifts__text header-three">Bug Magnet</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-work">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For work</h3>
-              <p class="best-gifts__text header-three">
-                Shortcut Cheater
-              </p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-health">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For health</h3>
-              <p class="best-gifts__text header-three">Posture Levitation</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-harmony">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For harmony</h3>
-              <p class="best-gifts__text header-three">Bug Acceptance Guru</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-health">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For health</h3>
-              <p class="best-gifts__text header-three">Snack Resister</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-harmony">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For harmony</h3>
-              <p class="best-gifts__text header-three">
-                Error Laugher
-              </p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-health">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For health</h3>
-              <p class="best-gifts__text header-three">Hydration Bot</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-work">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For work</h3>
-              <p class="best-gifts__text header-three">Merge Master</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-harmony">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For harmony</h3>
-              <p class="best-gifts__text header-three">Joy Charger</p>
-            </div>
-          </li>
-          <li class="best-gifts__item for-harmony">
-            <div class="best-gifts__item-box">
-              <h3 class="best-gifts__title header-four">For harmony</h3>
-              <p class="best-gifts__text header-three">
-                Spontaneous Coding Philosopher
-              </p>
-            </div>
-          </li>
-        </ul>
+        <ul class="best-gifts__list"></ul>
       </section>
     </main>
     <footer class="footer" id="footer">
@@ -205,6 +139,15 @@
         </a>
       </div>
     </footer>
+    <button class="scroll-to-top" aria-label="Scroll to top">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="white"/>
+        <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#FF4646"/>
+        <path d="M28 21V35" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34 27L28 21" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 27L28 21" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
     <script src="../script.js"></script>
   </body>
