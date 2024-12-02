@@ -1,26 +1,26 @@
-1. Implementation of the burger menu on both pages: +22  
+1. [v] Implementation of the burger menu on both pages: +22  
 Реализация меню-бургера на обеих страницах: +22
-    - At a page width of 768px and less, the navigation panel hides, and the burger icon appears: +2   
+    - [v] At a page width of 768px and less, the navigation panel hides, and the burger icon appears: +2   
     При ширине страницы 768px и меньше панель навигации скрывается, появляется иконка бургера: +2.
-    - When clicking the burger icon, the burger menu slides out from the right, and the burger icon smoothly transforms into a cross: +2  
+    - [v] When clicking the burger icon, the burger menu slides out from the right, and the burger icon smoothly transforms into a cross: +2  
     При клике на иконку бургера меню плавно выдвигается справа, и иконка бургера плавно превращается в крестик: +2.
-    - The burger menu occupies the entire available screen area below the `<header>` block: +2  
+    - [v] The burger menu occupies the entire available screen area below the `<header>` block: +2  
     Меню-бургер занимает всю доступную область экрана под блоком `<header>`: +2.
-    - When clicking the cross, the burger menu smoothly hides, moving to the right of the screen, and the cross smoothly transforms into a burger icon: +2  
+    - [v] When clicking the cross, the burger menu smoothly hides, moving to the right of the screen, and the cross smoothly transforms into a burger icon: +2  
     При клике на крестик меню-бургер плавно скрывается, уходя вправо, а крестик плавно превращается обратно в иконку бургера: +2.
-    - The burger icon is created using HTML and CSS without the use of images/svg: +2  
+    - [v] The burger icon is created using HTML and CSS without the use of images/svg: +2  
     Иконка бургера создаётся с помощью HTML и CSS, без использования изображений или SVG: +2.
-    - Links in the burger menu work, providing smooth scrolling to anchor points: +2  
+    - [v] Links in the burger menu work, providing smooth scrolling to anchor points: +2  
     Ссылки в меню-бургере работают, обеспечивая плавную прокрутку к якорным точкам: +2.
-    - When clicking on any link (interactive or non-interactive) in the menu, the burger menu hides, and the cross transforms into a burger icon: +2  
+    - [v] When clicking on any link (interactive or non-interactive) in the menu, the burger menu hides, and the cross transforms into a burger icon: +2  
     При клике на любую ссылку (интерактивную или нет) меню-бургер скрывается, и крестик превращается в иконку бургера: +2.
-    - When clicking on any link (interactive or non-interactive) in the menu, the burger menu smoothly hides to the right, and the cross smoothly transforms into a burger icon if a user stays on the same page: +2  
+    - [v] When clicking on any link (interactive or non-interactive) in the menu, the burger menu smoothly hides to the right, and the cross smoothly transforms into a burger icon if a user stays on the same page: +2  
     При клике на любую ссылку меню-бургер плавно скрывается вправо, и крестик плавно превращается обратно в иконку бургера, если пользователь остаётся на той же странице: +2.
-    - The placement and sizes of elements in the burger menu correspond to the layout (horizontal and vertical centering of menu items): +2  
+    - [v] The placement and sizes of elements in the burger menu correspond to the layout (horizontal and vertical centering of menu items): +2  
     Расположение и размеры элементов в меню-бургере соответствуют макету (горизонтальное и вертикальное центрирование пунктов меню): +2.
-    - The page behind the open menu does not scroll: +2  
+    - [v] The page behind the open menu does not scroll: +2  
     Страница за открытым меню не прокручивается: +2.
-    - When the page width increases to more than 768px, the burger icon and the open burger menu hide, and the navigation panel appears: +2  
+    - [v] When the page width increases to more than 768px, the burger icon and the open burger menu hide, and the navigation panel appears: +2  
     При увеличении ширины страницы более 768px иконка бургера и открытое меню-бургер скрываются, а панель навигации отображается: +2.
 2. [v] Implementation of the Slider on the home page: +18  
 Реализация слайдера на главной странице: +18
@@ -64,17 +64,17 @@
     Кнопка появляется после прокрутки страницы вниз на 300px: +4
     - [v] When the button is clicked, the page scrolls to the top: +2  
     При клике на кнопку страница прокручивается наверх: +2.
-7. Implementation of the Modal for selected gift on both pages: +18  
+7. [v] Implementation of the Modal for selected gift on both pages: +18  
 Реализация модального окна для выбранного подарка на обеих страницах: +18
-    - The Modal with the description of a specific gift opens when clicking on any part of a card of gift: +4  
+    - [v] The Modal with the description of a specific gift opens when clicking on any part of a card of gift: +4  
     Модальное окно с описанием подарка открывается при клике на любую часть карточки подарка: +4.
-    - The description and superpowers in the Modal corresponds to the selected gift: +4  
+    - [v] The description and superpowers in the Modal corresponds to the selected gift: +4  
     Описание и суперспособности в модальном окне соответствуют выбранному подарку: +4.
-    - The part of the page outside the Modal is darkened: +2  
+    - [v] The part of the page outside the Modal is darkened: +2  
     Область страницы за пределами модального окна затемняется: +2.
-    - When the Modal is open, the vertical scroll of the page becomes inactive; when closed, it becomes active again: +4  
+    - [v] When the Modal is open, the vertical scroll of the page becomes inactive; when closed, it becomes active again: +4  
     При открытом модальном окне вертикальная прокрутка страницы становится неактивной; при закрытии активируется: +4.
-    - Clicking on the area around the Modal and Close button closes it: +2  
+    - [v] Clicking on the area around the Modal and Close button closes it: +2  
     При клике на затемнённую область или кнопку "Закрыть" модальное окно закрывается: +2.
-    - The Modal is centered on both axes, sizes of modal elements and their layout match the design: +2  
+    - [v] The Modal is centered on both axes, sizes of modal elements and their layout match the design: +2  
     Модальное окно центрируется по обеим осям, размеры и расположение элементов соответствуют дизайну: +2.
