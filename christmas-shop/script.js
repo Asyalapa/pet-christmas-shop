@@ -561,7 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('seconds').closest('.timer__item'),
       finishDate
     );
-    CardsGenerate.initialize('.best-gifts__list', '../gifts.json', { count: 4 });
+    CardsGenerate.initialize('.best-gifts__list', './gifts.json', { count: 4 });
   }
 
   if (pageName === 'gifts-page') {
