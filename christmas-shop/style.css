@@ -39,6 +39,20 @@ body {
 body.no-scroll {
   overflow: hidden;
 }
+::-webkit-scrollbar {
+  width: 17px;
+}
+::-webkit-scrollbar-track {
+  background: var(--content-bg-color);
+  border-radius: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-10-color);
+  border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
 ul {
   list-style-type: none;
   display: flex;
