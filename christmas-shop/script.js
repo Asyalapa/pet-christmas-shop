@@ -313,10 +313,18 @@ const CardsFilter = (function () {
     filtres.forEach((item) => {
       item.addEventListener('change', (event) => {
         const selectedCategory = event.target.value;
-
+        cardsAnimation(cards);
         filterCards(selectedCategory, cards);
         filterStyle(filtres);
       });
+    });
+  }
+
+  function cardsAnimation(cardsList) {
+    const cardsItems = Array.from(cardsList);
+    cardsItems.forEach((item) => {
+      item.classList.add('cards-scale');
+      setTimeout(() => item.classList.remove('cards-scale'), 300);
     });
   }
 
