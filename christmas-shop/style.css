@@ -428,7 +428,7 @@ a {
 }
 .slider__item {
   display: flex;
-  gap: 19px;
+  gap: 21px;
   flex-wrap: nowrap;
   align-items: center;
 }
