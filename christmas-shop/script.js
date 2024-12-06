@@ -9,6 +9,10 @@ const Slider = (function () {
   let gap = 0;
   let sliderVisibleWidth = 0;
   let slideMove = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let clickCount = 0;
+  let maxClickCount = 3;
 
   // Подготовка слайдера: настройка элементов, прослушка событий
   function initialize(section, wrapper, leftButton, rightButton) {
@@ -26,30 +30,35 @@ const Slider = (function () {
 
     window.addEventListener('load', updateSliderWidth);
     window.addEventListener('resize', updateSliderWidth);
-    leftBtn.addEventListener('click', () => moveSlides(1));
-    rightBtn.addEventListener('click', () => moveSlides(-1));
+    leftBtn.addEventListener('click', () => handleSlide(1));
+    rightBtn.addEventListener('click', () => handleSlide(-1));
+
+    sliderWrapper.addEventListener('touchstart', handleTouchStart);
+    sliderWrapper.addEventListener('touchmove', handleTouchMove);
+    sliderWrapper.addEventListener('touchend', handleTouchEnd);
   }
 
   // Расчет сдвига слайдов
   function updateSliderWidth() {
     sliderVisibleWidth = slider.offsetWidth;
-    gap = parseInt(getComputedStyle(sliderWrapper).gap);
+    gap = parseInt(getComputedStyle(sliderWrapper).gap || 0);
     const slidesWidth = sliderItems.reduce((sum, slideWidth) => sum + slideWidth.offsetWidth, 0);
     sliderWidth = slidesWidth + (gap * sliderItems.length - 1) + (parseInt(getComputedStyle(slider).padding.split(' ')[1]) * 2);
     const hiddenWidth = sliderWidth - sliderVisibleWidth;
 
-    slideMove = Math.ceil(sliderVisibleWidth > 768 ? hiddenWidth / 3 : hiddenWidth / 6);
+    maxClickCount = sliderVisibleWidth > 768 ? 3 : 6;
+    slideMove = Math.ceil(hiddenWidth / maxClickCount);
+
     sliderWrapper.style.transform = `translateX(0px)`;
+    clickCount = 0;
     
     setTimeout(() => updateButtonStates(0), 0);
   }
-
   // Получение текущей позиции слайдера
   function getCurrentPosition() {
     const transformValue = getComputedStyle(sliderWrapper).transform;
     return transformValue !== 'none' ? parseFloat(transformValue.split(',')[4]) : 0;
   }
-
   // Обновление состояний кнопок
   function updateButtonStates(newPositionX = null) {
     const currentPositionX = newPositionX !== null ? newPositionX : getCurrentPosition();
@@ -63,26 +72,62 @@ const Slider = (function () {
     if (leftBtn.disabled && !wasleftBtnDisabled) turnoverButton(leftBtn);
     if (rightBtn.disabled && !wasRightBtnDisabled) turnoverButton(rightBtn);
   }
-
   //Вибрация кнопок при достижении конца слайдера
   function turnoverButton(button) {
     button.classList.add('turnover');
     setTimeout(() => button.classList.remove('turnover'), 300);
   }
 
-  // Перемещение слайдов
-  function moveSlides(direction) {
+  function handleSlide(direction) {
+    clickCount++;
+    console.log(maxClickCount, clickCount);
+    if (clickCount >= maxClickCount) {
+      moveSlides(direction, maxClickCount);
+      clickCount = 0; // Сброс счетчика
+    } else {
+      moveSlides(direction, clickCount);
+    }
+  }
+
+  function moveSlides(direction, count) {
     const currentPositionX = getCurrentPosition();
     const maxPositionX = -(sliderWidth - sliderVisibleWidth - gap);
 
     let newPositionX = currentPositionX + (direction * slideMove);
-    
+    console.log(count, newPositionX);
     newPositionX = Math.max(newPositionX, maxPositionX);
     newPositionX = Math.min(newPositionX, 0);
-    
-    updateButtonStates(newPositionX);
+
+    // sliderWrapper.style.transition = "transform 0.3s ease-in-out";
     sliderWrapper.style.transform = `translateX(${newPositionX}px)`;
+
+    updateButtonStates(newPositionX);
  }
+
+  // Обработка тач-событий
+  function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+    currentTranslate = getCurrentPosition();
+    sliderWrapper.style.transition = 'none';
+  }
+
+  function handleTouchMove(event) {
+    const currentX = event.touches[0].clientX;
+    const deltaX = currentX - startX;
+    sliderWrapper.style.transform = `translateX(${currentTranslate - deltaX}px)`;
+  }
+
+  function handleTouchEnd(event) {
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) > sliderVisibleWidth / 4) {
+      moveSlides(deltaX > 0 ? 1 : -1);
+    } else {
+      sliderWrapper.style.transition = 'transform 0.3s ease-in-out';
+      sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  }
 
   return { initialize };
 })();
