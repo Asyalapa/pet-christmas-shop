@@ -7,6 +7,29 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
+  
+  <h1 class="title">Welcome to the 'Simon says' game!</h1>
+  <form id="game-settings" class="settings">
+    <fieldset class="settings__difficulty">
+      <legend class="settings__difficulty-title">Choose difficulty level:</legend>
+      <label class="settings__difficulty-item">
+        <input type="radio" name="difficulty" value="easy" class="settings__difficulty-input" checked>
+        <span>Easy</span>
+      </label>
+      <label class="settings__difficulty-item">
+        <input type="radio" name="difficulty" value="medium" class="settings__difficulty-input">
+        <span>Medium</span>
+      </label>
+      <label class="settings__difficulty-item">
+        <input type="radio" name="difficulty" value="hard" class="settings__difficulty-input">
+        <span>Hard</span>
+      </label>
+    </fieldset>
+    <button class="btn" type="submit">
+      <span class="btn__text">Start</span>
+    </button>
+  </form>
+  
   <script src="./script.js"></script>
 </body>
 </html>
