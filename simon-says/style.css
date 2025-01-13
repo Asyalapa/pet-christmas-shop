@@ -190,7 +190,14 @@ body {
   font-size: 4.5rem;
   letter-spacing: 1rem;
 }
-.game-box__title {
+.game-box__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.game-box__title,
+.game-box__round {
   color: var(--btn-text-color);
 }
 .game-box__changes {
@@ -249,7 +256,7 @@ body {
   transition: opacity 0.3s ease;
   z-index: 1;
 }
-.keyboard:active::after {
+.keyboard.active::after {
   opacity: 1;
 }
 
@@ -266,7 +273,7 @@ body {
   transition: color .3s ease-in-out;
   z-index: 2;
 }
-.keyboard:active i {
+.keyboard.active i {
   color: var(--btn-color);
 }
 

@@ -9,7 +9,7 @@
 <body>
   
   <h1 class="title">Welcome to&nbsp;the 'Simon&nbsp;says' game!</h1>
-  <div class="display-none" style="display: none;">
+  <!-- <div class="display-none" style="display: none;">
     <form id="game-settings" class="settings">
       <fieldset class="settings__difficulty">
         <legend class="settings__difficulty-title">Choose difficulty level:</legend>
@@ -30,9 +30,16 @@
         <span class="btn__text">Start</span>
       </button>
     </form>
-  </div>
+  </div> -->
   <div class="game-box">
-    <h2 class="game-box__title easy-lvl">Easy level</h2>
+    <div class="game-box__info">
+      <h2 class="game-box__title easy-lvl">Easy level</h2>
+      <button class="btn game-box__start" type="submit">
+        <span class="btn__text">Start</span>
+      </button>
+      <h3 class="game-box__round">Round: 1</h3>
+    </div>
+    
     <p class="game-box__changes">Do you want to change difficulty?</p>
     <div class="easy-lvl__keyboard">
       <span class="keyboard"><i>1</i></span>
@@ -46,7 +53,7 @@
       <span class="keyboard"><i>9</i></span>
       <span class="keyboard"><i>0</i></span>
     </div>
-    <div class="medium-lvl__keyboard">
+    <!-- <div class="medium-lvl__keyboard">
       <div class="medium-lvl__keyboard-row">
         <span class="keyboard"><i>q</i></span>
         <span class="keyboard"><i>w</i></span>
@@ -79,7 +86,7 @@
         <span class="keyboard"><i>n</i></span>
         <span class="keyboard"><i>m</i></span>
       </div>
-    </div>
+    </div> -->
   </div>
   
   <script src="./script.js"></script>
