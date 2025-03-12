@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Shop</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="shortcut icon" href="./img/snowflake.svg" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Allura&display=swap"
+      rel="stylesheet"
+   >
+  </head>
+
+  <body id="home-page">
+    <h1 class="hidden-title">Christmas Shop</h1>
+    <header class="header">
+      <a href="./index.html" class="header__logo">
+        <i class="header__logo-icon"></i>
+        <span class="header__logo-text action-small">the gifts</span>
+      </a>
+      <div class="header__burger-menu">
+        <div class="header__burger-lines">
+          <span class="header__burger-item"></span>
+          <span class="header__burger-item"></span>
+        </div>
+        <nav class="header__navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="./gifts/index.html" class="navigation__link action-small">gifts</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#about" class="navigation__link action-small">about</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#best-gifts" class="navigation__link action-small">best</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#footer" class="navigation__link action-small">contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__text-box">
+          <p class="hero__italic-text caption">Merry&nbsp;Christmas</p>
+          <h2 class="hero__text header-one">
+            Gift yourself<br>the magic of new<br>possibilities
+          </h2>
+          <a href="./gifts/index.html" class="main__btn hero__btn action-small">
+            Explore&nbsp;Magical&nbsp;Gifts
+          </a>
+          <p class="hero__italic-text caption">
+            and&nbsp;Happy&nbsp;New&nbsp;Year
+          </p>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="about__wrapper">
+          <div class="about__container">
+            <div class="about__text-box">
+              <h2 class="about__header caption">About</h2>
+              <p class="about__header-text header-two">
+                Unleash your inner superhero!
+              </p>
+              <p class="about__paragraph paragraph">
+                This New Year marks the beginning of your journey to inner
+                harmony and new strengths. We offer unique gifts that will help
+                you improve your life.
+              </p>
+            </div>
+          </div>
+          <div class="about__container"></div>
+        </div>
+      </section>
+      <section class="slider">
+        <h2 class="slider__header caption">Become Happier!</h2>
+        <p class="slider__text action-large">in the new 2025</p>
+        <ul class="slider__wrapper">
+          <li class="slider__item">
+            <h3 class="slider__caption slider-text">live</h3>
+            <img
+              src="./img/snowman.png"
+              alt="Image symbolizing live"
+              class="slider__image"
+           >
+          </li>
+          <li class="slider__item">
+            <h3 class="slider__caption slider-text">create</h3>
+            <img
+              src="./img/christmas-trees.png"
+              alt="Image symbolizing create"
+              class="slider__image"
+           >
+          </li>
+          <li class="slider__item">
+            <h3 class="slider__caption slider-text">love</h3>
+            <img
+              src="./img/christmas-tree-ball.png"
+              alt="Image symbolizing love"
+              class="slider__image"
+           >
+          </li>
+          <li class="slider__item">
+            <h3 class="slider__caption slider-text">dream</h3>
+            <img
+              src="./img/fairytale-house.png"
+              alt="Image symbolizing dream"
+              class="slider__image"
+           >
+          </li>
+        </ul>
+        <div class="slider__btn-wrapper">
+          <button class="slider__btn left-button">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 7H1M1 7L7 1M1 7L7 13"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+             ></path>
+            </svg>
+          </button>
+          <button class="slider__btn right-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+             ></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="best-gifts" id="best-gifts">
+        <div class="best-gifts__text-box">
+          <h2 class="best-gifts__header caption">Best Gifts</h2>
+          <p class="best-gifts__text header-two">especially for you</p>
+        </div>
+        <ul class="best-gifts__list"></ul>
+      </section>
+      <section class="cta">
+        <div class="cta__box">
+          <p class="cta__paragraph header-two">
+            Ready to start your journey to a better version of yourself?
+          </p>
+          <a href="./gifts/index.html" class="main__btn cta__btn action-small">
+            Explore Magical Gifts
+          </a>
+          <h2 class="cta__header-text caption">
+            The New Year is Coming Soon...
+          </h2>
+          <ul class="timer__box">
+            <li class="timer__item header-four">
+              <span class="timer__item-text header-two" id="days">47</span><span class="timer__item-text time-signature">days</span>
+            </li>
+            <li class="timer__item header-four">
+              <span class="timer__item-text header-two" id="hours">5</span><span class="timer__item-text time-signature">hours</span>
+            </li>
+            <li class="timer__item header-four">
+              <span class="timer__item-text header-two" id="minutes">34</span><span class="timer__item-text time-signature">minutes</span>
+            </li>
+            <li class="timer__item header-four">
+              <span class="timer__item-text header-two" id="seconds">12</span><span class="timer__item-text time-signature">seconds</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__box">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="tel:+375291112233" class="footer__contact">
+              <i class="footer__icon phone"></i>
+              <p class="action-large">
+                <span class="nowrap">+375 (29) 111-22-33</span>
+              </p>
+              <p class="footer__text header-three">Call Us</p>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="https://maps.app.goo.gl/ywHoP9vJxF8Sf8m39"
+              class="footer__contact action-large"
+              target="_blank"
+            >
+              <i class="footer__icon map"></i>
+              <p class="action-large">Magic forest</p>
+              <p class="footer__text header-three">meet us</p>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="mailto:gifts@magic.com"
+              class="footer__contact action-large"
+            >
+              <i class="footer__icon mail"></i>
+              <p class="action-large">
+                <span class="nowrap">gifts@magic.com</span>
+              </p>
+              <p class="footer__text header-three">write us</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <ul class="footer__icon-list">
+          <li class="footer__icon-item">
+            <a href="https://telegram.org/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="./img/icons.svg#icon-tg"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icon-item">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="./img/icons.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icon-item">
+            <a href="https://www.instagram.com/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="./img/icons.svg#icon-ig"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icon-item">
+            <a href="https://x.com/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="./img/icons.svg#icon-x"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer__text paragraph">
+          &copy; Copyright 2025, All Rights Reserved
+        </p>
+        <a href="https://rs.school/" target="_blank" class="footer__school-link caption">
+            Made in Rolling Scopes School
+        </a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

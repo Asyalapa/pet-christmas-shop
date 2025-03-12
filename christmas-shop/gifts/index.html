@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS | Gifts</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="shortcut icon" href="../img/snowflake.svg" type="image/x-icon">
+</head>
+
+  <body id="gifts-page">
+    <h1 class="hidden-title">Christmas Shop</h1>
+    <header class="header">
+      <a href="../index.html" class="header__logo">
+        <i class="header__logo-icon"></i>
+        <span class="header__logo-text action-small">the gifts</span>
+      </a>
+      <div class="header__burger-menu">
+        <div class="header__burger-lines">
+          <span class="header__burger-item"></span>
+          <span class="header__burger-item"></span>
+        </div>
+        <nav class="header__navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item navigation__item--active">
+              <a href="#" class="navigation__link action-small">gifts</a>
+            </li>
+            <li class="navigation__item">
+              <a href="../index.html#about" class="navigation__link action-small">about</a>
+            </li>
+            <li class="navigation__item">
+              <a href="../index.html#best-gifts" class="navigation__link action-small">best</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#footer" class="navigation__link action-small">contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main gifts__main">
+        <h2 class="gifts__title header-one">Achieve health, harmony, and inner strength</h2>
+        <fieldset class="gift__categories-list">
+          <legend class="hidden-title">Filter gifts by category</legend>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="all" checked>
+            <span>all</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-work">
+            <span>for&nbsp;work</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-health">
+            <span>for&nbsp;health</span>
+          </label>
+          <label class="gift__categories-item action-small">
+            <input class="gift__categories-input" type="radio" name="category" value="for-harmony">
+            <span>for&nbsp;harmony</span>
+          </label>
+        </fieldset>
+      <div class="best-gifts gifts__section">
+        <ul class="best-gifts__list"></ul>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer__box">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="tel:+375291112233" class="footer__contact">
+              <i class="footer__icon phone"></i>
+              <p class="action-large">
+                <span class="nowrap">+375 (29) 111-22-33</span>
+              </p>
+              <p class="footer__text header-three">Call Us</p>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="https://maps.app.goo.gl/ywHoP9vJxF8Sf8m39"
+              class="footer__contact action-large"
+              target="_blank"
+            >
+              <i class="footer__icon map"></i>
+              <p class="action-large">Magic forest</p>
+              <p class="footer__text header-three">meet us</p>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="mailto:gifts@magic.com"
+              class="footer__contact action-large"
+            >
+              <i class="footer__icon mail"></i>
+              <p class="action-large">
+                <span class="nowrap">gifts@magic.com</span>
+              </p>
+              <p class="footer__text header-three">write us</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__box">
+        <ul class="footer__icon-list">
+          <li class="footer__icon-item">
+            <a href="https://telegram.org/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="../img/icons.svg#icon-tg"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icon-item">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="../img/icons.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icon-item">
+            <a href="https://www.instagram.com/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="../img/icons.svg#icon-ig"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icon-item">
+            <a href="https://x.com/" target="_blank" class="footer__icon-link">
+              <svg class="footer__icon-social">
+                <use href="../img/icons.svg#icon-x"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer__text paragraph">
+          &copy; Copyright 2025, All Rights Reserved
+        </p>
+        <a href="https://rs.school/" target="_blank" class="footer__school-link caption">
+            Made in Rolling Scopes School
+        </a>
+      </div>
+    </footer>
+    <button class="scroll-to-top" aria-label="Scroll to top">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" fill="white"/>
+        <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#FF4646"/>
+        <path d="M28 21V35" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34 27L28 21" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 27L28 21" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
